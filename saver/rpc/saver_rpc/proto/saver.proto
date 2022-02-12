@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+option go_package = ".;proto";
+
+service saver{
+  rpc Save(Request) returns (google.protobuf.Empty);
+}
+
+message Request {
+  string Item = 1;
+}

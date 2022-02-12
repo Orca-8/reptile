@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = ".;proto";
+
+service worker{
+  rpc Worker(RequestInfo) returns (ResponseInfo);
+}
+
+message RequestInfo {
+  string Request = 1;
+}
+
+message ResponseInfo {
+  string Response = 1;
+}
